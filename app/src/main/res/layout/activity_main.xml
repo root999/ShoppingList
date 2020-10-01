@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:fontFamily="monospace"
+        android:textSize="20sp"
+        android:layout_marginTop="50dp"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/text_main"/>
+
+    <EditText
+        android:id="@+id/shop_item"
+        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="#DFDADA"
+        android:fontFamily="monospace"
+        android:inputType="textPersonName"
+        android:singleLine="false"
+        android:textSize="30sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/text_main"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shop_item"
+        android:text="Kaydet"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+        android:id="@+id/send_button"
+        android:onClick="saveItem"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shop_item"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentRight="true"
+        android:text="Listeyi Görüntüle"
+        android:id="@+id/show_list"
+        android:onClick="sendItem"/>
+
+</RelativeLayout>
